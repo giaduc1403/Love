@@ -1,0 +1,106 @@
+body{
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    height: 110vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.63),rgba(0, 0, 0, 0.4)),
+    url("https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/315354340_488444426580126_8416348350543861224_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=rGtFlDQhoWoAX99Q4iY&tn=c_XiIYoYb-EOV3It&_nc_ht=scontent.fsgn5-5.fna&oh=03_AdSAtyRf3JLjBb9T1xNB0Aoz029RiCZvRw0RSRghQaUBmg&oe=6397440B")no-repeat center center/cover;
+}
+
+.box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-col{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    text-align: center;
+    display: block;
+    top: 50%;
+    left: 50%;  
+    color: #FF5CA4;
+    animation: example 1.3s infinite;
+}
+
+#pinkboard {
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    animation: animate 1.3s infinite;
+}
+
+#pinkboard:before,
+#pinkboard:after {
+    content: '';
+    position: absolute;
+    background: #ff0000;
+    width: 100px;
+    height: 160px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#pinkboard:before {
+    left: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#pinkboard:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes example {
+    0% {
+        color: #FF5CA4;
+    }
+    30% {
+        color: #fa0b0b;
+
+    }
+    60% {
+        color: #c7e40a;
+    }
+    100% {
+        color: #14ff3b;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(.8);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
